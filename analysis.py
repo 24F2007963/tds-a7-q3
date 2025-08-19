@@ -65,6 +65,11 @@ min_bill_slider = widgets.FloatSlider(
     layout=widgets.Layout(width="60%")
 )
 
+# Add interactive widgets
+slider = mo.ui.slider(1, 100)
+# Create dynamic Markdown
+mo.md(f"{slider} {"🟢" * slider.value}")
+
 # Dropdown to choose which summary metric to show
 metric_dropdown = widgets.Dropdown(
     options=[("Mean tip", "mean_tip"), ("Median total bill", "median_total"), ("Count", "count")],
